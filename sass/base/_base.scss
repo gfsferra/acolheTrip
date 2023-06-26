@@ -1,0 +1,32 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(126, 213, 111, 0.8);
+  color: #ffffff;
+}
+
+@media (max-width: 1330px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 515px) {
+  html {
+    font-size: 5px;
+  }
+}
