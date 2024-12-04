@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Natours webpage for people who love to travel">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/icon-font.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+    <link rel="stylesheet" href="css/discover.css">
+
+    <title>AcolheTrip | Encontre simplicidade e paz</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__logo-box">
+            <img src="./img/logo-white.png" alt="Logo" class="header__logo">
+        </div>
+        <div class="header__text-box">
+            <h1 class="heading-primary">
+                <span class="heading-primary--main">AcolheTrip</span>
+                <span class="heading-primary--sub">Aqui sua vida acontece</span>
+            </h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="section-tours">
+            <div class="u-center-text u-margin-bottom-big">
+                <h2 class="heading-secondary">
+                    Encontre a sua jornada
+                </h2>
+            </div>
+            
+            <div class="menu-container">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Pesquisar por título..." onkeyup="filterCards()">
+                    <button class="search-btn" onclick="filterCards()">&#x21aa;</button> <!-- Ícone de Enter -->
+                </div>
+            
+                <div class="theme-filter">
+                    <select id="themeFilter" onchange="filterCards()">
+                        <option value="all">Todos os temas</option>
+                        <option value="water">Águas</option>
+                        <option value="forest">Floresta</option>
+                        <option value="history">História</option>
+                        <option value="retreat">Refúgio</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="row" id="cardContainer">
+
+                <!-- Card 1 -->
+                <div class="col-1-of-3 card" data-theme="water" data-title="lagoinha do leste">
+                    <div class="card__side card__side--front card__side--front-1">
+                        <div class="card__picture card__picture--1" data-image="trilha-da-lagoinha-do-leste-via-pantano.jpg">
+                            &nbsp;
+                        </div>
+                        <h4 class="card__heading">
+                            <span class="card__heading-span card__heading-span--1">lagoinha do leste</span>
+                        </h4>
+                        <div class="card__details">
+                            <ul>
+                                <li>Florianópolis</li>
+                                <li>Santa Catarina</li>
+                                <li>Trilha (Via Pântano)<br> Dificuldade: fácil</li>
+                                <li>Guía incluso</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card__side card__side--back card__side--back-1">
+                        <div class="card__cta">
+                            <div class="card__price-box">
+                                <p class="card__price-only">Only</p>
+                                <p class="card__price-value">$297</p>
+                            </div>
+                            <a href="#" class="btn btn--white">Book now!</a>
+                        </div>
+                    </div>
+                </div>
+
+            
+                <!-- Card 2 -->
+                <div class="col-1-of-3 card" data-theme="forest" data-title="Cânion Guartelá">
+                    <div class="card__side card__side--front card__side--front-2">
+                        <div class="card__picture card__picture--2" data-image="canion-tibagi.jpg">
+                            &nbsp;
+                        </div>
+                        <h4 class="card__heading">
+                            <span class="card__heading-span card__heading-span--2">Cânion Guartelá</span>
+                        </h4>
+                        <div class="card__details">
+                            <ul>
+                                <li>Tibagi</li>
+                                <li>Paraná</li>
+                                <li>Tour turístico <br> Díficuldade: médio</li>
+                                <li>grupos de até 15 pessoas</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card__side card__side--back card__side--back-2">
+                        <div class="card__cta">
+                            <div class="card__price-box">
+                                <p class="card__price-only">Only</p>
+                                <p class="card__price-value">$450</p>
+                            </div>
+                            <a href="#" class="btn btn--white">Book now!</a>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Card 3 -->
+                <div class="col-1-of-3 card" data-theme="history" data-title="sao joao del rei">
+                    <div class="card__side card__side--front card__side--front-3">
+                        <div class="card__picture card__picture--3">
+                            &nbsp;
+                        </div>
+                        <h4 class="card__heading">
+                            <span class="card__heading-span card__heading-span--3">São João del Rei</span>
+                        </h4>
+                        <div class="card__details">
+                            <ul>
+                                <li>São João del Rei</li>
+                                <li>Minas Gerais</li>
+                                <li>Tour livre</li>
+                                <li>Hospedagem:<br>Del Mundo Hostel</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card__side card__side--back card__side--back-3">
+                        <div class="card__cta">
+                            <div class="card__price-box">
+                                <p class="card__price-only">Only</p>
+                                <p class="card__price-value">$850</p>
+                            </div>
+                            <a href="#" class="btn btn--white">Book now!</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-1-of-3 card" data-theme="retreat water"  data-title="Expedicao Varpa">
+                    <div class="card__side card__side--front card__side--front-1">
+                        <div class="card__picture card__picture--1" data-image="trilha-canoa-varpa.jpg">
+                            &nbsp;
+                        </div>
+                        <h4 class="card__heading">
+                            <span class="card__heading-span card__heading-span--1">Expedição Varpa</span>
+                        </h4>
+                        <div class="card__details">
+                            <ul>
+                                <li>Tupã</li>
+                                <li>São Paulo</li>
+                                <li>Acampamento</li>
+                                <li>3 dias</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card__side card__side--back card__side--back-1">
+                        <div class="card__cta">
+                            <div class="card__price-box">
+                                <p class="card__price-only">Only</p>
+                                <p class="card__price-value">$850</p>
+                            </div>
+                            <a href="#" class="btn btn--white">Book now!</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="col-1-of-3 card" data-theme="retreat florest" data-title="Pomerode Rural">
+                    <div class="card__side card__side--front card__side--front-3">
+                        <div class="card__picture card__picture--3" data-image="contos-de-fada-pomerode.jpg">
+                            &nbsp;
+                        </div>
+                        <h4 class="card__heading">
+                            <span class="card__heading-span card__heading-span--3">Pomerode Rural</span>
+                        </h4>
+                        <div class="card__details">
+                            <ul>
+                                <li>Pomerode</li>
+                                <li>Santa Catarina</li>
+                                <li>14 dias</li>
+                                <li>Hospedagem:<br>Pousada Rural Mundo Antigo</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card__side card__side--back card__side--back-3">
+                        <div class="card__cta">
+                            <div class="card__price-box">
+                                <p class="card__price-only">Only</p>
+                                <p class="card__price-value">$850</p>
+                            </div>
+                            <a href="#" class="btn btn--white">Book now!</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="col-1-of-3 card" data-theme="history" data-title="Pomerode">
+                    <div class="card__side card__side--front card__side--front-3">
+                        <div class="card__picture card__picture--3" data-image="turismo-pomerode2.jpg">
+                            &nbsp;
+                        </div>
+                        <h4 class="card__heading">
+                            <span class="card__heading-span card__heading-span--3">Pomerode</span>
+                        </h4>
+                        <div class="card__details">
+                            <ul>
+                                <li>Pomerode</li>
+                                <li>Santa Catarina</li>
+                                <li>5 dias</li>
+                                <li>Hospedagem:<br>Hotel Steinhausen Colonial</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card__side card__side--back card__side--back-3">
+                        <div class="card__cta">
+                            <div class="card__price-box">
+                                <p class="card__price-only">Only</p>
+                                <p class="card__price-value">$850</p>
+                            </div>
+                            <a href="#" class="btn btn--white">Book now!</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="col-1-of-3 card" data-theme="forest history" data-title="Mirante de Caconde">
+                    <div class="card__side card__side--front card__side--front-3">
+                        <div class="card__picture card__picture--2" data-image="mirante-caconde.jpg">
+                            &nbsp;
+                        </div>
+                        <h4 class="card__heading">
+                            <span class="card__heading-span card__heading-span--2">Mirante de Caconde</span>
+                        </h4>
+                        <div class="card__details">
+                            <ul>
+                                <li>Caconde</li>
+                                <li>São Paulo</li>
+                                <li>Tour livre</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card__side card__side--back card__side--back-2">
+                        <div class="card__cta">
+                            <div class="card__price-box">
+                                <p class="card__price-only">Only</p>
+                                <p class="card__price-value">$850</p>
+                            </div>
+                            <a href="#" class="btn btn--white">Book now!</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="col-1-of-3 card" data-theme="forest" data-title="Cachoeira da Deusa">
+                    <div class="card__side card__side--front card__side--front-2">
+                        <div class="card__picture card__picture--2" data-image="cachoeira-graca.jpg">
+                            &nbsp;
+                        </div>
+                        <h4 class="card__heading">
+                            <span class="card__heading-span card__heading-span--2">Cachoeira da Deusa</span>
+                        </h4>
+                        <div class="card__details">
+                            <ul>
+                                <li>Garça</li>
+                                <li>São Paulo</li>
+                                <li>Trilha<br>Dificuldade: média</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card__side card__side--back card__side--back-2">
+                        <div class="card__cta">
+                            <div class="card__price-box">
+                                <p class="card__price-only">Only</p>
+                                <p class="card__price-value">$850</p>
+                            </div>
+                            <a href="#" class="btn btn--white">Book now!</a>
+                        </div>
+                    </div>
+                </div>
+
+            
+            </div>
+            
+            
+
+
+
+        </section>
+
+    </main>
+    <script src="script.js"></script>
+
+</html>
